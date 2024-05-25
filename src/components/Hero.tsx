@@ -42,27 +42,30 @@ export default function Hero() {
               fontSize: 'clamp(3.5rem, 10vw, 4rem)',
             }}
           >
-            Our latest&nbsp;
-            <Typography
+            Improve D2C conversions
+          </Typography>
+          <Typography
               component="span"
               variant="h1"
               sx={{
-                fontSize: 'clamp(3rem, 10vw, 4rem)',
+                display: 'flex',
+                flexDirection: { xs: 'column', md: 'row' },
+                alignSelf: 'center',
+                textAlign: 'center',
+                fontSize: 'clamp(3.5rem, 10vw, 4rem)',
                 color: (theme) =>
                   theme.palette.mode === 'light' ? 'primary.main' : 'primary.light',
               }}
             >
-              products
-            </Typography>
+              with AI agents
           </Typography>
           <Typography
             textAlign="center"
             color="text.secondary"
             sx={{ alignSelf: 'center', width: { sm: '100%', md: '80%' } }}
           >
-            Explore our cutting-edge dashboard, delivering high-quality solutions
-            tailored to your needs. Elevate your experience with top-tier features
-            and services.
+            Answer up to 70% of customer inquiries without human intervention. 
+            Convert more leads, provide stellar support, and supercharge your revenue using our game-changing AI-driven customer service solution.
           </Typography>
           <Stack
             direction={{ xs: 'column', sm: 'row' }}
