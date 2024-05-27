@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import { PaletteMode } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
@@ -14,9 +13,9 @@ import LogoCollection from './components/LogoCollection';
 import Highlights from './components/Highlights';
 import Pricing from './components/Pricing';
 import Features from './components/Features';
-import Testimonials from './components/Testimonials';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
+import Markov from './components/Markov';
 import getLPTheme from './getLPTheme';
 import './App.css';
 
@@ -82,11 +81,11 @@ function App() {
       <CssBaseline />
       <AppAppBar mode={mode} toggleColorMode={toggleColorMode} />
       <Hero />
+      <Markov />
       <Box sx={{ bgcolor: 'background.default' }}>
         <LogoCollection />
         <Features />
         <Divider />
-        <Testimonials />
         <Divider />
         <Highlights />
         <Divider />
