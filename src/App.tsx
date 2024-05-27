@@ -81,7 +81,6 @@ function App() {
       <CssBaseline />
       <AppAppBar mode={mode} toggleColorMode={toggleColorMode} />
       <Hero />
-      <Markov />
       <Box sx={{ bgcolor: 'background.default' }}>
         <LogoCollection />
         <Features />
@@ -94,6 +93,7 @@ function App() {
         <FAQ />
         <Divider />
         <Footer />
+        <Markov />
       </Box>
       <ToggleCustomTheme
         showCustomTheme={showCustomTheme}
