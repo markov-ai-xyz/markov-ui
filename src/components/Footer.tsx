@@ -105,16 +105,10 @@ export default function Footer() {
             Features
           </Link>
           <Link color="text.secondary" href="#">
-            Testimonials
-          </Link>
-          <Link color="text.secondary" href="#">
             Highlights
           </Link>
           <Link color="text.secondary" href="#">
             Pricing
-          </Link>
-          <Link color="text.secondary" href="#">
-            FAQs
           </Link>
         </Box>
         <Box

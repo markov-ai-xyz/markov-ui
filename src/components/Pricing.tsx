@@ -14,8 +14,8 @@ import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
 
 const tiers = [
   {
-    title: 'Free',
-    price: '0',
+    title: 'Starter',
+    price: '19',
     description: [
       '10 users included',
       '2 GB of storage',
@@ -28,7 +28,7 @@ const tiers = [
   {
     title: 'Professional',
     subheader: 'Recommended',
-    price: '15',
+    price: '49',
     description: [
       '20 users included',
       '10 GB of storage',
@@ -42,7 +42,7 @@ const tiers = [
   },
   {
     title: 'Enterprise',
-    price: '30',
+    price: '99',
     description: [
       '50 users included',
       '30 GB of storage',
@@ -77,6 +77,7 @@ export default function Pricing() {
         <Typography component="h2" variant="h4" color="text.primary">
           Pricing
         </Typography>
+        <br />
         <Typography variant="body1" color="text.secondary">
           Quickly build an effective pricing table for your potential customers with
           this layout. <br />
