@@ -22,7 +22,7 @@ const tiers = [
       'Help center access',
       'Email support',
     ],
-    buttonText: 'Sign up for free',
+    buttonText: 'Start now',
     buttonVariant: 'outlined',
   },
   {
@@ -49,7 +49,7 @@ const tiers = [
       'Help center access',
       'Phone & email support',
     ],
-    buttonText: 'Contact us',
+    buttonText: 'Start now',
     buttonVariant: 'outlined',
   },
 ];

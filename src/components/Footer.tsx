@@ -8,26 +8,49 @@ import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 
-import FacebookIcon from '@mui/icons-material/GitHub';
+import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import TwitterIcon from '@mui/icons-material/X';
-
-const logoStyle = {
-  width: '140px',
-  height: 'auto',
-};
+import MarkovSvg from './icons/MarkovSvg';
 
 function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary" mt={1}>
       {'Copyright © '}
-      <Link href="https://mui.com/">Sitemark&nbsp;</Link>
       {new Date().getFullYear()}
+      &nbsp;
+      Markov AI
     </Typography>
   );
 }
 
 export default function Footer() {
+  const scrollToSection = (sectionId: string) => {
+    const sectionElement = document.getElementById(sectionId);
+    const offset = 128;
+    if (sectionElement) {
+      const targetScroll = sectionElement.offsetTop - offset;
+      sectionElement.scrollIntoView({ behavior: 'smooth' });
+      window.scrollTo({
+        top: targetScroll,
+        behavior: 'smooth',
+      });
+    }
+  };
+
+  const [email, setEmail] = React.useState('');
+  const [isValidEmail, setIsValidEmail] = React.useState(true);
+
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+      const inputValue = event.target.value;
+      setEmail(inputValue);
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      setIsValidEmail(emailRegex.test(inputValue));
+  };
+
+  const handleSubscribe = () => {
+      if (isValidEmail) { setEmail(''); }
+  };
+
   return (
     <Container
       sx={{
@@ -56,14 +79,8 @@ export default function Footer() {
           }}
         >
           <Box sx={{ width: { xs: '100%', sm: '60%' } }}>
-            <Box sx={{ ml: '-15px' }}>
-              <img
-                src={
-                  'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12e6faf73568658154dae_SitemarkDefault.svg'
-                }
-                style={logoStyle}
-                alt="logo of sitemark"
-              />
+            <Box sx={{ ml: '-10px' }}>
+              <MarkovSvg className="markov-logo" width={100} height={100} />
             </Box>
             <Typography variant="body2" fontWeight={600} gutterBottom>
               Newsletter
@@ -81,11 +98,19 @@ export default function Footer() {
                 aria-label="Enter your email address"
                 placeholder="Your email address"
                 inputProps={{
-                  autoComplete: 'off',
-                  'aria-label': 'Enter your email address',
+                    autoComplete: 'off',
+                    'aria-label': 'Enter your email address',
                 }}
+                value={email}
+                error={!isValidEmail}
+                onChange={handleInputChange}
               />
-              <Button variant="contained" color="primary" sx={{ flexShrink: 0 }}>
+              <Button
+                variant="contained"
+                color="primary"
+                onClick={handleSubscribe}
+                disabled={!isValidEmail}
+              >
                 Subscribe
               </Button>
             </Stack>
@@ -101,54 +126,14 @@ export default function Footer() {
           <Typography variant="body2" fontWeight={600}>
             Product
           </Typography>
-          <Link color="text.secondary" href="#">
+          <Link color="text.secondary" onClick={() => scrollToSection('features')} sx={{ cursor: 'pointer' }}>
             Features
           </Link>
-          <Link color="text.secondary" href="#">
+          <Link color="text.secondary" onClick={() => scrollToSection('highlights')} sx={{ cursor: 'pointer' }}>
             Highlights
           </Link>
-          <Link color="text.secondary" href="#">
+          <Link color="text.secondary" onClick={() => scrollToSection('pricing')} sx={{ cursor: 'pointer' }}>
             Pricing
-          </Link>
-        </Box>
-        <Box
-          sx={{
-            display: { xs: 'none', sm: 'flex' },
-            flexDirection: 'column',
-            gap: 1,
-          }}
-        >
-          <Typography variant="body2" fontWeight={600}>
-            Company
-          </Typography>
-          <Link color="text.secondary" href="#">
-            About us
-          </Link>
-          <Link color="text.secondary" href="#">
-            Careers
-          </Link>
-          <Link color="text.secondary" href="#">
-            Press
-          </Link>
-        </Box>
-        <Box
-          sx={{
-            display: { xs: 'none', sm: 'flex' },
-            flexDirection: 'column',
-            gap: 1,
-          }}
-        >
-          <Typography variant="body2" fontWeight={600}>
-            Legal
-          </Typography>
-          <Link color="text.secondary" href="#">
-            Terms
-          </Link>
-          <Link color="text.secondary" href="#">
-            Privacy
-          </Link>
-          <Link color="text.secondary" href="#">
-            Contact
           </Link>
         </Box>
       </Box>
@@ -185,27 +170,19 @@ export default function Footer() {
         >
           <IconButton
             color="inherit"
-            href="https://github.com/mui"
-            aria-label="GitHub"
-            sx={{ alignSelf: 'center' }}
-          >
-            <FacebookIcon />
-          </IconButton>
-          <IconButton
-            color="inherit"
-            href="https://twitter.com/MaterialUI"
-            aria-label="X"
-            sx={{ alignSelf: 'center' }}
-          >
-            <TwitterIcon />
-          </IconButton>
-          <IconButton
-            color="inherit"
-            href="https://www.linkedin.com/company/mui/"
+            href="https://www.linkedin.com/company/markovai/"
             aria-label="LinkedIn"
             sx={{ alignSelf: 'center' }}
           >
             <LinkedInIcon />
+          </IconButton>
+          <IconButton
+            color="inherit"
+            href="https://www.npmjs.com/package/markov-ai/"
+            aria-label="GitHub"
+            sx={{ alignSelf: 'center' }}
+          >
+            <GitHubIcon />
           </IconButton>
         </Stack>
       </Box>

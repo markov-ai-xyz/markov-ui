@@ -9,6 +9,20 @@ import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 
 export default function Hero() {
+  const [email, setEmail] = React.useState('');
+  const [isValidEmail, setIsValidEmail] = React.useState(true);
+
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const inputValue = event.target.value;
+    setEmail(inputValue);
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    setIsValidEmail(emailRegex.test(inputValue));
+  };
+
+  const handleStartNow = () => {
+    if (isValidEmail) { setEmail(''); }
+  };
+
   return (
     <Box
       id="hero"
@@ -64,8 +78,8 @@ export default function Hero() {
             color="text.secondary"
             sx={{ alignSelf: 'center', width: { sm: '100%', md: '80%' } }}
           >
-            Answer up to 70% of customer inquiries without human intervention. 
-            Convert more leads, provide stellar support, and supercharge your revenue using our game-changing AI-driven customer service solution.
+            Answer customer inquiries without human intervention. 
+            Convert more leads, provide stellar support, and supercharge your revenue using our AI-driven solutions.
           </Typography>
           <Stack
             direction={{ xs: 'column', sm: 'row' }}
@@ -73,23 +87,31 @@ export default function Hero() {
             spacing={1}
             useFlexGap
             sx={{ pt: 2, width: { xs: '100%', sm: 'auto' } }}
-          >
-            <TextField
-              id="outlined-basic"
-              hiddenLabel
-              size="small"
-              variant="outlined"
-              aria-label="Enter your email address"
-              placeholder="Your email address"
-              inputProps={{
+        >
+          <TextField
+            id="outlined-basic"
+            hiddenLabel
+            size="small"
+            variant="outlined"
+            aria-label="Enter your email address"
+            placeholder="Your email address"
+            inputProps={{
                 autoComplete: 'off',
                 'aria-label': 'Enter your email address',
-              }}
-            />
-            <Button variant="contained" color="primary">
+            }}
+            value={email}
+            error={!isValidEmail}
+            onChange={handleInputChange}
+          />
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={handleStartNow}
+            disabled={!isValidEmail}
+          >
               Start now
-            </Button>
-          </Stack>
+          </Button>
+        </Stack>
           <Typography variant="caption" textAlign="center" sx={{ opacity: 0.8 }}>
             By clicking &quot;Start now&quot; you agree to our&nbsp;
             <Link href="#" color="primary">
