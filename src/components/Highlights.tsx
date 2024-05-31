@@ -14,19 +14,20 @@ const items = [
     icon: <SettingsSuggestRoundedIcon />,
     title: '5 lines of code',
     description:
-      'Experience unmatched durability that goes above and beyond with lasting investment.',
+      `Add markov-ai as a dependency & link it with your DOM. We handle the rest.`,
   },
   {
     icon: <ConstructionRoundedIcon />,
-    title: '5 minutes of integration ',
+    title: '50 seconds of integration ',
     description:
-      'Experience unmatched durability that goes above and beyond with lasting investment.',
+      `Use our code snippets seamlessly with any framework. We're built fully native on JavaScript.`,
   },
   {
     icon: <AutoFixHighRoundedIcon />,
     title: '50 minutes of training',
     description:
-      'Stay ahead with features that set new standards, addressing your evolving needs better than the rest.',
+      `Provide us your webpages, documents, and databases, 
+      and we'll take care of vectorizing the information and building your knowledge base.`,
   },
 ];
 
@@ -57,13 +58,11 @@ export default function Highlights() {
           }}
         >
           <Typography component="h2" variant="h4">
-            Highlights
+            Integration
           </Typography>
           <br />
           <Typography variant="body1" sx={{ color: 'grey.400' }}>
-            Explore why our product stands out: adaptability, durability,
-            user-friendly design, and innovation. Enjoy reliable customer support and
-            precision in every detail.
+            Seamless integration experience that's concise, configurable, and quick!
           </Typography>
         </Box>
         <Grid container spacing={2.5}>

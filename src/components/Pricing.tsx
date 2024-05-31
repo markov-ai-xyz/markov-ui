@@ -17,10 +17,9 @@ const tiers = [
     title: 'Starter',
     price: '19',
     description: [
-      '10 users included',
-      '2 GB of storage',
-      'Help center access',
-      'Email support',
+      '1000 messages/day',
+      'Trained on webpages & documents',
+      'CSV integrations',
     ],
     buttonText: 'Start now',
     buttonVariant: 'outlined',
@@ -30,12 +29,9 @@ const tiers = [
     subheader: 'Recommended',
     price: '49',
     description: [
-      '20 users included',
-      '10 GB of storage',
-      'Help center access',
-      'Priority email support',
-      'Dedicated team',
-      'Best deals',
+      'Unlimited messages',
+      'Trained on webpages, documents & non-relational databases',
+      'CRM & ERP integrations',
     ],
     buttonText: 'Start now',
     buttonVariant: 'contained',
@@ -44,10 +40,9 @@ const tiers = [
     title: 'Enterprise',
     price: '99',
     description: [
-      '50 users included',
-      '30 GB of storage',
-      'Help center access',
-      'Phone & email support',
+      'Unlimited messages',
+      'Trained on webpages, documents, databases & datalakes',
+      'CRM, ERP & custom integrations',
     ],
     buttonText: 'Start now',
     buttonVariant: 'outlined',
@@ -79,10 +74,7 @@ export default function Pricing() {
         </Typography>
         <br />
         <Typography variant="body1" color="text.secondary">
-          Quickly build an effective pricing table for your potential customers with
-          this layout. <br />
-          It&apos;s built with default Material UI components with little
-          customization.
+          Flexible pricing for teams of every size.
         </Typography>
       </Box>
       <Grid container spacing={3} alignItems="center" justifyContent="center">
