@@ -6,7 +6,7 @@ import Divider from '@mui/material/Divider';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import AppBar from './components/AppBar';
 import Hero from './components/Hero';
-import Highlights from './components/Highlights';
+import Integration from './components/Integration';
 import Pricing from './components/Pricing';
 import Features from './components/Features';
 import Footer from './components/Footer';
@@ -30,7 +30,7 @@ function App() {
         <Features />
         <Divider />
         <Divider />
-        <Highlights />
+        <Integration />
         <Divider />
         <Pricing />
         <Divider />
