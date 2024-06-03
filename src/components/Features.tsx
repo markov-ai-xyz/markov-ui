@@ -12,6 +12,9 @@ import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
 import DevicesRoundedIcon from '@mui/icons-material/DevicesRounded';
 import EdgesensorHighRoundedIcon from '@mui/icons-material/EdgesensorHighRounded';
 import ViewQuiltRoundedIcon from '@mui/icons-material/ViewQuiltRounded';
+import KnowledgeBase from './icons/KnowledgeBase';
+import PublicInternet from './icons/PublicInternet';
+import SmartDashboard from './icons/SmartDashboard';
 
 const items = [
   {
@@ -19,24 +22,21 @@ const items = [
     title: 'Custom knowledge base',
     description:
       'Trained on your webpages, documents, and databases. Upsell your brand with a configurable level of bias.',
-    imageLight: 'url("/static/images/templates/templates-images/dash-light.png")',
-    imageDark: 'url("/static/images/templates/templates-images/dash-dark.png")',
+    image: <KnowledgeBase />,
   },
   {
     icon: <EdgesensorHighRoundedIcon />,
     title: 'Public internet access',
     description:
       'Equipped to retrieve real-time information and provide up-to-date responses augmented with your knowledge base.',
-    imageLight: 'url("/static/images/templates/templates-images/mobile-light.png")',
-    imageDark: 'url("/static/images/templates/templates-images/mobile-dark.png")',
+    image: <PublicInternet />,
   },
   {
     icon: <DevicesRoundedIcon />,
     title: 'Visitor profile dashboard',
     description:
       'Built to help generate leads and segment visitor demographics.',
-    imageLight: 'url("/static/images/templates/templates-images/devices-light.png")',
-    imageDark: 'url("/static/images/templates/templates-images/devices-dark.png")',
+    image: <SmartDashboard />,
   },
 ];
 
@@ -104,15 +104,15 @@ export default function Features() {
           >
             <Box
               sx={{
-                backgroundImage: (theme) =>
-                  theme.palette.mode === 'light'
-                    ? items[selectedItemIndex].imageLight
-                    : items[selectedItemIndex].imageDark,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                minHeight: 280,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                height: '100%',
+                width: '100%',
               }}
-            />
+            >
+              { items[selectedItemIndex].image }
+            </Box>
             <Box sx={{ px: 2, pb: 2 }}>
               <Typography color="text.primary" variant="body2" fontWeight="bold">
                 {selectedFeature.title}
@@ -254,16 +254,15 @@ export default function Features() {
           >
             <Box
               sx={{
-                m: 'auto',
-                width: 420,
-                height: 500,
-                backgroundSize: 'contain',
-                backgroundImage: (theme) =>
-                  theme.palette.mode === 'light'
-                    ? items[selectedItemIndex].imageLight
-                    : items[selectedItemIndex].imageDark,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                height: '100%',
+                width: '100%',
               }}
-            />
+            >
+              { items[selectedItemIndex].image }
+            </Box>
           </Card>
         </Grid>
       </Grid>
