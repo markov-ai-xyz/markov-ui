@@ -8,7 +8,7 @@ const Markov = () => {
   useEffect(() => {
     if (rootRef.current) {
       const config = {
-        apiKey: "mdp-123",
+        apiKey: "mdp-markov-ai",
         botName: "Markov",
         initialMessages: [
           createChatBotMessage('Hello there! How can I help you?', { widget: "" }),
@@ -19,7 +19,9 @@ const Markov = () => {
 
       renderWidget(rootRef.current, config);
 
-      return () => {};
+      return () => { 
+        localStorage.removeItem('markovJwt');
+      };
     }
   }, []);
 
