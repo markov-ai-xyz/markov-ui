@@ -1,4 +1,6 @@
-import * as React from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import { styled, createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import MuiDrawer from '@mui/material/Drawer';
@@ -86,6 +88,34 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 const defaultTheme = createTheme();
 
 export default function Dashboard() {
+  const navigate = useNavigate();
+  const [ token ] = useState(localStorage.getItem('markovPortalJwt'));
+
+  useEffect(() => {
+    if (!token) {
+      navigate('/portal');
+    }
+  }, [token, navigate]);
+
+  const verifyToken = useCallback(async () => {
+    try {
+      const response = await axios.post('/validate-login', {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+      if (!response.data) {
+        navigate('/portal');
+      }
+    } catch (error) {
+      navigate('/portal');
+    }
+  }, [token, navigate]);
+  
+  useEffect(() => {
+    verifyToken();
+  }, [token, navigate, verifyToken]);
+
   const [open, setOpen] = React.useState(true);
   const toggleDrawer = () => {
     setOpen(!open);
