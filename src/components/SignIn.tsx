@@ -1,4 +1,5 @@
-import * as React from 'react';
+import React, { useState } from 'react';
+import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
@@ -25,16 +26,24 @@ function Copyright(props: any) {
   );
 }
 
-// TODO remove, this demo shouldn't need to reset the theme.
 const defaultTheme = createTheme();
 
 export default function SignIn() {
   const navigate = useNavigate();
+  const [ username, setUsername ] = useState('');
+  const [ password, setPassword ] = useState('');
+  const [ error, setError ] = useState(false);
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    navigate('/dashboard');
-
+      event.preventDefault();
+      try {
+          const response = await axios.post('/login', { username, password });
+          const { token } = response.data;
+          localStorage.setItem('markovPortalJwt', token);
+          navigate('/dashboard');
+      } catch (error) {
+          setError(true);
+      }
   };
 
   return (
@@ -57,24 +66,32 @@ export default function SignIn() {
           </Typography>
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
             <TextField
-              margin="normal"
-              required
-              fullWidth
-              id="email"
-              label="Email Address"
-              name="email"
-              autoComplete="email"
-              autoFocus
+                margin="normal"
+                required
+                fullWidth
+                id="email"
+                label="Email Address"
+                name="email"
+                autoComplete="email"
+                autoFocus
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                error={error}
+                color={error ? 'error' : 'primary'}
             />
             <TextField
-              margin="normal"
-              required
-              fullWidth
-              name="password"
-              label="Password"
-              type="password"
-              id="password"
-              autoComplete="current-password"
+                margin="normal"
+                required
+                fullWidth
+                name="password"
+                label="Password"
+                type="password"
+                id="password"
+                autoComplete="current-password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                error={error}
+                color={error ? 'error' : 'primary'}
             />
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
