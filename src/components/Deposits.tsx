@@ -10,7 +10,7 @@ function preventDefault(event: React.MouseEvent) {
 export default function Deposits() {
   return (
     <React.Fragment>
-      <Title>Recent inquiries</Title>
+      <Title>Leads</Title>
       <Typography component="p" variant="h4">
         78
       </Typography>
