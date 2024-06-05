@@ -37,7 +37,7 @@ export default function SignIn() {
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
       event.preventDefault();
       try {
-          const response = await axios.post('/login', { username, password });
+          const response = await axios.post('http://localhost:5000/login', { username, password });
           const { token } = response.data;
           localStorage.setItem('markovPortalJwt', token);
           navigate('/dashboard');
