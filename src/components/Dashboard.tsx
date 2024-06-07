@@ -99,7 +99,7 @@ export default function Dashboard() {
 
   const verifyToken = useCallback(async () => {
     try {
-      const response = await axios.post('http://localhost:5000/validate-login', null, {
+      const response = await axios.post('/validate-login', null, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
