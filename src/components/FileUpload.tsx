@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10 MB
 
-const FileUpload: React.FC = () => {
+export const FileUpload: React.FC = () => {
   const [file, setFile] = useState<File | null>(null);
   const [uploadStatus, setUploadStatus] = useState<string>("");
 

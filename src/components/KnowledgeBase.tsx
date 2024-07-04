@@ -2,9 +2,11 @@ import React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
+import Toolbar from '@mui/material/Toolbar';
 import ToggleBar from './ToggleBar';
 import Drawer from './Drawer';
 import Copyright from './Copyright';
+import FileUpload from './FileUpload'
 
 export default function KnowledgeBase() {
 
@@ -16,7 +18,7 @@ export default function KnowledgeBase() {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <ToggleBar open={open} toggleDrawer={toggleDrawer} />
+      <ToggleBar title='Knowledge Base' open={open} toggleDrawer={toggleDrawer} />
       <Drawer open={open} toggleDrawer={toggleDrawer} />
       <Box
         component="main"
@@ -30,6 +32,8 @@ export default function KnowledgeBase() {
           overflow: 'auto',
         }}
       >
+        <Toolbar sx={{ py: 2 }} /> 
+        <FileUpload />
         <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
           <Copyright sx={{ pt: 4 }} />
         </Container>
