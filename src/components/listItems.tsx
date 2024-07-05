@@ -13,11 +13,11 @@ export const mainListItems = (
       </ListItemIcon>
       <ListItemText primary="Dashboard" />
     </ListItemButton>
-    <ListItemButton component="a" href="/knowledge-base">
+    <ListItemButton component="a" href="/supply-knowledge">
       <ListItemIcon>
         <LayersIcon />
       </ListItemIcon>
-      <ListItemText primary="Knowledge Base" />
+      <ListItemText primary="Supply Knowledge" />
     </ListItemButton>
   </React.Fragment>
 );
