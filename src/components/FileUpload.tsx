@@ -6,9 +6,10 @@ const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10 MB
 
 interface FileUploadProps {
   title: string;
+  url: string;
 }
 
-export const FileUpload: React.FC<FileUploadProps> = ({ title }) => {
+export const FileUpload: React.FC<FileUploadProps> = ({ title, url }) => {
   const [file, setFile] = useState<File | null>(null);
   const [uploadStatus, setUploadStatus] = useState<string>('');
 
@@ -32,7 +33,7 @@ export const FileUpload: React.FC<FileUploadProps> = ({ title }) => {
     formData.append('file', file);
 
     try {
-      await axios.post('http://localhost:5000/upload', formData, {
+      await axios.post(url, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

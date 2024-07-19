@@ -10,7 +10,6 @@ import Integration from './Integration';
 import Pricing from './Pricing';
 import Features from './Features';
 import Footer from './Footer';
-import Markov from './Markov';
 import '../App.css';
 
 const Home: React.FC = () => {
@@ -34,7 +33,6 @@ const Home: React.FC = () => {
         <Pricing />
         <Divider />
         <Footer />
-        <Markov />
       </Box>
     </ThemeProvider>
   );

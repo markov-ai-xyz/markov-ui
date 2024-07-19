@@ -12,19 +12,19 @@ import SettingsSuggestRoundedIcon from '@mui/icons-material/SettingsSuggestRound
 const items = [
   {
     icon: <SettingsSuggestRoundedIcon />,
-    title: '5 lines of code',
+    title: '1 line of code',
     description:
       `Add markov-ai as a dependency & link it with your DOM. We handle the rest.`,
   },
   {
     icon: <ConstructionRoundedIcon />,
-    title: '50 seconds of integration ',
+    title: '1 minute of integration ',
     description:
       `Use our code snippets seamlessly with any framework. We're built fully native on JavaScript.`,
   },
   {
     icon: <AutoFixHighRoundedIcon />,
-    title: '50 minutes of training',
+    title: '1 hour of training',
     description:
       `Provide us your webpages, documents, and databases, 
       and we'll take care of vectorizing the information and building your knowledge base.`,

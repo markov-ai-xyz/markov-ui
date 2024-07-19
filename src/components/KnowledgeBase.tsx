@@ -2,7 +2,6 @@ import React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-import Grid from '@mui/material/Grid';
 import Toolbar from '@mui/material/Toolbar';
 import ToggleBar from './ToggleBar';
 import Drawer from './Drawer';
@@ -36,20 +35,7 @@ export default function KnowledgeBase() {
       >
         <Toolbar sx={{ py: 2 }} /> 
         <Container maxWidth="md" sx={{ py: 4 }}>
-          <Grid container spacing={3}>
-            <Grid item xs={12} sm={6}>
-              <FileUpload title="Written Content" />
-            </Grid>
-            <Grid item xs={12} sm={6}>
-              <FileUpload title="Visual Media" />
-            </Grid>
-            <Grid item xs={12} sm={6}>
-              <FileUpload title="Audio Recordings" />
-            </Grid>
-            <Grid item xs={12} sm={6}>
-              <FileUpload title="Video Footage" />
-            </Grid>
-          </Grid>
+          <FileUpload title="File Upload" url="http://localhost:5000/upload" />
         </Container>
         <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
           <Copyright sx={{ pt: 4 }} />
