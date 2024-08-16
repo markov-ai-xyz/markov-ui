@@ -56,7 +56,7 @@ export default function Hero() {
               fontSize: 'clamp(3.5rem, 10vw, 4rem)',
             }}
           >
-            Improve D2C conversions
+            Convert chaos into clarity
           </Typography>
           <Typography
               component="span"
@@ -71,15 +71,16 @@ export default function Hero() {
                   theme.palette.mode === 'light' ? 'primary.main' : 'primary.light',
               }}
             >
-              with AI agents
+              with Markov AI
           </Typography>
           <Typography
             textAlign="center"
             color="text.secondary"
             sx={{ alignSelf: 'center', width: { sm: '100%', md: '80%' } }}
           >
-            Answer customer inquiries without human intervention. 
-            Convert more leads, provide stellar support, and supercharge your revenue using our AI-driven solutions.
+            Seamlessly craft multi-modal knowledge graphs from your enterpise data.
+            <br/>
+            Leverage LLMs to get stellar answers & supercharge your business.
           </Typography>
           <Stack
             direction={{ xs: 'column', sm: 'row' }}

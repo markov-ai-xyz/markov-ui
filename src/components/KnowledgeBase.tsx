@@ -35,7 +35,7 @@ export default function KnowledgeBase() {
       >
         <Toolbar sx={{ py: 2 }} /> 
         <Container maxWidth="md" sx={{ py: 4 }}>
-          <FileUpload title="File Upload" url="http://localhost:5000/upload" />
+          <FileUpload title="File Upload" url="/upload" />
         </Container>
         <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
           <Copyright sx={{ pt: 4 }} />
