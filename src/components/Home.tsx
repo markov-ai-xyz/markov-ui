@@ -8,7 +8,8 @@ import AppBar from './AppBar';
 import Hero from './Hero';
 import Integration from './Integration';
 import Pricing from './Pricing';
-import Features from './Features';
+import FeaturesLeft from './FeaturesLeft';
+import FeaturesRight from './FeaturesRight';
 import Footer from './Footer';
 import '../App.css';
 
@@ -26,7 +27,8 @@ const Home: React.FC = () => {
       <AppBar mode={mode} toggleColorMode={toggleColorMode} />
       <Hero />
       <Box sx={{ bgcolor: 'background.default' }}>
-        <Features />
+        <FeaturesLeft />
+        <FeaturesRight />
         <Divider />
         <Integration />
         <Divider />

@@ -80,7 +80,7 @@ export default function Hero() {
           >
             Seamlessly craft multi-modal knowledge graphs from your enterpise data.
             <br/>
-            Leverage LLMs to get stellar answers & supercharge your business.
+            Ground LLMs to get stellar answers & supercharge your business.
           </Typography>
           <Stack
             direction={{ xs: 'column', sm: 'row' }}
