@@ -12,28 +12,28 @@ import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
 import DevicesRoundedIcon from '@mui/icons-material/DevicesRounded';
 import EdgesensorHighRoundedIcon from '@mui/icons-material/EdgesensorHighRounded';
 import ViewQuiltRoundedIcon from '@mui/icons-material/ViewQuiltRounded';
-import KnowledgeBase from './icons/KnowledgeBase';
-import PublicInternet from './icons/PublicInternet';
-import SmartDashboard from './icons/SmartDashboard';
+import Conversational from './icons/Conversational';
+import Internet from './icons/Internet';
+import Integration from './icons/Integration';
 
 const items = [
   {
-    icon: <ViewQuiltRoundedIcon />,
+    icon: <ChevronRightRoundedIcon fontSize="medium" sx={{ mt: '1px', ml: '2px' }}/>,
     title: 'Conversational retrieval from knowledge graph',
     description: 'We integrate vector search for unstructured text with navigation through the knowledge graph. This approach enhances context and delivers richer, more relevant responses.',
-    image: <KnowledgeBase />,
+    image: <Conversational />,
   },
   {
-    icon: <EdgesensorHighRoundedIcon />,
+    icon: <ChevronRightRoundedIcon fontSize="medium" sx={{ mt: '1px', ml: '2px' }}/>,
     title: 'Public internet access',
     description: 'We are equipped to retrieve real-time information and provide up-to-date responses augmented with your knowledge base.',
-    image: <PublicInternet />,
+    image: <Internet />,
   },
   {
-    icon: <DevicesRoundedIcon />,
+    icon: <ChevronRightRoundedIcon fontSize="medium" sx={{ mt: '1px', ml: '2px' }}/>,
     title: 'Custom integrations',
     description: 'We provide custom integrations with messaging platforms (WhatsApp, Telegram, etc) and CRM solutions (Hubspot, Zoho, Tidio etc).',
-    image: <SmartDashboard />,
+    image: <Integration />,
   },
 ];
 
@@ -156,11 +156,6 @@ export default function FeaturesRight() {
                   '&:hover > svg': { transform: 'translateX(2px)' },
                 }}
               >
-                <span>Learn more</span>
-                <ChevronRightRoundedIcon
-                  fontSize="small"
-                  sx={{ mt: '1px', ml: '2px' }}
-                />
               </Link>
             </Box>
           </Box>
