@@ -19,23 +19,20 @@ import SmartDashboard from './icons/SmartDashboard';
 const items = [
   {
     icon: <ViewQuiltRoundedIcon />,
-    title: 'Structured custom Knowledge base',
-    description:
-      'Trained on your webpages, documents, and databases. Upsell your brand with a configurable level of bias.',
+    title: 'Conversational retrieval from knowledge graph',
+    description: 'We integrate vector search for unstructured text with navigation through the knowledge graph. This approach enhances context and delivers richer, more relevant responses.',
     image: <KnowledgeBase />,
   },
   {
     icon: <EdgesensorHighRoundedIcon />,
     title: 'Public internet access',
-    description:
-      'Equipped to retrieve real-time information and provide up-to-date responses augmented with your knowledge base.',
+    description: 'We are equipped to retrieve real-time information and provide up-to-date responses augmented with your knowledge base.',
     image: <PublicInternet />,
   },
   {
     icon: <DevicesRoundedIcon />,
-    title: 'Visitor profile dashboard',
-    description:
-      'Built to help generate leads and segment visitor demographics.',
+    title: 'Custom integrations',
+    description: 'We provide custom integrations with messaging platforms (WhatsApp, Telegram, etc) and CRM solutions (Hubspot, Zoho, Tidio etc).',
     image: <SmartDashboard />,
   },
 ];

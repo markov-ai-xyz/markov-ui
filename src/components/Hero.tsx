@@ -92,7 +92,7 @@ export default function Hero() {
             color="text.primary"
             sx={{ alignSelf: 'center', width: { sm: '100%', md: '80%' } }}
           >
-            Seamlessly craft multi-modal knowledge graphs from your enterpise data.
+            Effortlessly convert your enterprise data into knowledge graphs featuring embeddings.
             <br/>
             Ground LLMs to get stellar answers & supercharge your business.
           </Typography>

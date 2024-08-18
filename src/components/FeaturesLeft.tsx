@@ -12,31 +12,28 @@ import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
 import DevicesRoundedIcon from '@mui/icons-material/DevicesRounded';
 import EdgesensorHighRoundedIcon from '@mui/icons-material/EdgesensorHighRounded';
 import ViewQuiltRoundedIcon from '@mui/icons-material/ViewQuiltRounded';
-import KnowledgeBase from './icons/KnowledgeBase';
-import PublicInternet from './icons/PublicInternet';
-import SmartDashboard from './icons/SmartDashboard';
+import Extract from './icons/Extract';
+import Transform from './icons/Transform';
+import Load from './icons/Load';
 
 const items = [
   {
     icon: <ViewQuiltRoundedIcon />,
-    title: 'Custom knowledge base',
-    description:
-      'Trained on your webpages, documents, and databases. Upsell your brand with a configurable level of bias.',
-    image: <KnowledgeBase />,
+    title: 'Data ingestion from myriad sources',
+    description: 'About 80% of enterprise data is in hard-to-use formats like HTML, PDF, CSV, PNG, and PPTX. We facilitate extraction from all these formats.',
+    image: <Extract />,
   },
   {
     icon: <EdgesensorHighRoundedIcon />,
-    title: 'Public internet access',
-    description:
-      'Equipped to retrieve real-time information and provide up-to-date responses augmented with your knowledge base.',
-    image: <PublicInternet />,
+    title: 'Automatic identification of entities & their relationships',
+    description: 'Creating accurate and meaningful knowledge graphs has traditionally been a time-consuming and manual task. We fully automate this process, eliminating the need for any human involvement.',
+    image: <Transform />,
   },
   {
     icon: <DevicesRoundedIcon />,
-    title: 'Visitor profile dashboard',
-    description:
-      'Built to help generate leads and segment visitor demographics.',
-    image: <SmartDashboard />,
+    title: 'Storage in graph database with vector embeddings',
+    description: 'We securely store your business data in a stable graph database that utilizes vector embeddings. You can access it using Cypher queries.',
+    image: <Load />,
   },
 ];
 
