@@ -58,24 +58,38 @@ export default function Hero() {
           >
             Convert chaos into clarity
           </Typography>
-          <Typography
-              component="span"
+          <Box
+            sx={{
+              display: 'flex',
+              flexDirection: { xs: 'column', md: 'row' },
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <Typography
               variant="h1"
               sx={{
-                display: 'flex',
-                flexDirection: { xs: 'column', md: 'row' },
-                alignSelf: 'center',
                 textAlign: 'center',
                 fontSize: 'clamp(3.5rem, 10vw, 4rem)',
-                color: (theme) =>
-                  theme.palette.mode === 'light' ? 'primary.main' : 'primary.light',
+                marginRight: { md: '16px' },
               }}
             >
-              with Markov AI
-          </Typography>
+              with
+            </Typography>
+            <Typography
+              variant="h1"
+              sx={{
+                textAlign: 'center',
+                fontSize: 'clamp(3.5rem, 10vw, 4rem)',
+                color: (theme) => theme.palette.mode === 'light' ? 'primary.main' : 'primary.light',
+              }}
+            >
+              Markov AI
+            </Typography>
+          </Box>
           <Typography
             textAlign="center"
-            color="text.secondary"
+            color="text.primary"
             sx={{ alignSelf: 'center', width: { sm: '100%', md: '80%' } }}
           >
             Seamlessly craft multi-modal knowledge graphs from your enterpise data.
@@ -126,12 +140,9 @@ export default function Hero() {
           sx={(theme) => ({
             mt: { xs: 8, sm: 10 },
             alignSelf: 'center',
-            height: { xs: 200, sm: 700 },
-            width: '100%',
-            backgroundImage:
-              theme.palette.mode === 'light'
-                ? 'url("/static/images/templates/templates-images/hero-light.png")'
-                : 'url("/static/images/templates/templates-images/hero-dark.png")',
+            height: { xs: 500, sm: 700 },
+            width: { xs: 500, sm: 700 },
+            backgroundImage: 'url("/static/images/templates/templates-images/hero-light.webp")',
             backgroundSize: 'cover',
             borderRadius: '10px',
             outline: '1px solid',
