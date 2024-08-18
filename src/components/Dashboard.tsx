@@ -18,11 +18,11 @@ export default function Dashboard() {
   const navigate = useNavigate();
   const [token] = useState(localStorage.getItem('markovPortalJwt'));
 
-  // useEffect(() => {
-  //   if (!token) {
-  //     navigate('/portal');
-  //   }
-  // }, [token, navigate]);
+  useEffect(() => {
+    if (!token) {
+      navigate('/portal');
+    }
+  }, [token, navigate]);
 
   const verifyToken = useCallback(async () => {
     try {
@@ -39,9 +39,9 @@ export default function Dashboard() {
     }
   }, [token, navigate]);
 
-  // useEffect(() => {
-  //   verifyToken();
-  // }, [token, navigate, verifyToken]);
+  useEffect(() => {
+    verifyToken();
+  }, [token, navigate, verifyToken]);
 
   const [open, setOpen] = React.useState(true);
   const toggleDrawer = () => {

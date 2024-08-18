@@ -15,11 +15,11 @@ import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
 const tiers = [
   {
     title: 'Starter',
-    price: '19',
+    price: 'Free',
     description: [
-      '1000 messages/day',
-      'Trained on webpages & documents',
-      'CSV integrations',
+      'Upload 100MB of textual content',
+      'Provide 10 external links',
+      '5 reads per minute permitted',
     ],
     buttonText: 'Start now',
     buttonVariant: 'outlined',
@@ -27,22 +27,22 @@ const tiers = [
   {
     title: 'Professional',
     subheader: 'Recommended',
-    price: '49',
+    price: '$49',
     description: [
-      'Unlimited messages',
-      'Trained on webpages, documents & non-relational databases',
-      'CRM & ERP integrations',
+      'Generate one AI agent with basic features',
+      'Upload 1GB of content across modalities & provide 50 external links',
+      '50 reads per minute permitted',
     ],
     buttonText: 'Start now',
     buttonVariant: 'contained',
   },
   {
     title: 'Enterprise',
-    price: '99',
+    price: 'Custom',
     description: [
-      'Unlimited messages',
-      'Trained on webpages, documents, databases & datalakes',
-      'CRM, ERP & custom integrations',
+      'Generate AI agents customized for you',
+      'Upload unlimited content across modalities & provide unlimited external links',
+      'Messaging, CRM & custom integrations',
     ],
     buttonText: 'Start now',
     buttonVariant: 'outlined',
@@ -141,10 +141,10 @@ export default function Pricing() {
                   }}
                 >
                   <Typography component="h3" variant="h2">
-                    ${tier.price}
+                    {tier.price}
                   </Typography>
                   <Typography component="h3" variant="h6">
-                    &nbsp; per month
+                    &nbsp; {tier.price.includes('$') ? 'per month': ''}
                   </Typography>
                 </Box>
                 <Divider

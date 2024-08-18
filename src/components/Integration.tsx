@@ -27,7 +27,7 @@ const comprehensiveSolutionItems = [
     icon: <SettingsSuggestRoundedIcon />,
     title: 'Embed one line of code',
     description:
-      'Request an AI agent from our customer portal and embed the generated url: <script src="https://markovai.xyz/{uuid}.js"></script>',
+      'Request for an AI agent on our customer portal and embed the generated url: <script src="https://markovai.xyz/{uuid}.js"></script>',
   },
 ];
 

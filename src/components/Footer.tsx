@@ -178,7 +178,7 @@ export default function Footer() {
           </IconButton>
           <IconButton
             color="inherit"
-            href="https://www.npmjs.com/package/markov-ai/"
+            href="https://github.com/markov-ai-xyz/"
             aria-label="GitHub"
             sx={{ alignSelf: 'center' }}
           >
