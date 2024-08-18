@@ -5,29 +5,29 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import AutoFixHighRoundedIcon from '@mui/icons-material/AutoFixHighRounded';
-import ConstructionRoundedIcon from '@mui/icons-material/ConstructionRounded';
 import SettingsSuggestRoundedIcon from '@mui/icons-material/SettingsSuggestRounded';
 
-const items = [
+const pipelineAsAServiceItems = [
   {
     icon: <SettingsSuggestRoundedIcon />,
-    title: '1 line of code',
+    title: 'Use our SDKs',
     description:
-      `Add markov-ai as a dependency & link it with your DOM. We handle the rest.`,
+      'Install the Markov AI SDK from PyPI or NPM, and programmatically supply content across multiple modalities.',
   },
   {
-    icon: <ConstructionRoundedIcon />,
-    title: '1 minute of integration ',
+    icon: <SettingsSuggestRoundedIcon />,
+    title: 'Upload content on our portal',
     description:
-      `Use our code snippets seamlessly with any framework. We're built fully native on JavaScript.`,
+      `Navigate to our customer portal. Upload files and external links for ingestion.`,
   },
+];
+
+const comprehensiveSolutionItems = [
   {
-    icon: <AutoFixHighRoundedIcon />,
-    title: '1 hour of training',
+    icon: <SettingsSuggestRoundedIcon />,
+    title: 'Embed one line of code',
     description:
-      `Provide us your webpages, documents, and databases, 
-      and we'll take care of vectorizing the information and building your knowledge base.`,
+      'Request an AI agent from our customer portal and embed the generated url: <script src="https://markovai.xyz/{uuid}.js"></script>',
   },
 ];
 
@@ -51,23 +51,58 @@ export default function Integration() {
           gap: { xs: 3, sm: 6 },
         }}
       >
-        <Box
-          sx={{
-            width: { sm: '100%', md: '60%' },
-            textAlign: { sm: 'left', md: 'center' },
-          }}
+        <Typography component="h2" variant="h4">
+          Integration
+        </Typography>
+        <Typography component="h2" variant="h5" sx={{ 
+          color: 'grey.400', 
+          width: { sm: '100%', md: '60%' }, 
+          textAlign: { sm: 'left', md: 'center' }}}
         >
-          <Typography component="h2" variant="h4">
-            Integration
-          </Typography>
-          <br />
-          <Typography variant="body1" sx={{ color: 'grey.400' }}>
-            Seamless integration experience that's concise, configurable, and quick!
-          </Typography>
-        </Box>
+          Pipeline as a Service
+        </Typography>
         <Grid container spacing={2.5}>
-          {items.map((item, index) => (
-            <Grid item xs={12} sm={6} md={4} key={index}>
+          {pipelineAsAServiceItems.map((item, index) => (
+            <Grid item xs={6} sm={6} md={6} key={index}>
+              <Stack
+                direction="column"
+                color="inherit"
+                component={Card}
+                spacing={1}
+                useFlexGap
+                sx={{
+                  p: 3,
+                  height: '100%',
+                  border: '1px solid',
+                  borderColor: 'grey.800',
+                  background: 'transparent',
+                  backgroundColor: 'grey.900',
+                }}
+              >
+                <Box sx={{ opacity: '50%' }}>{item.icon}</Box>
+                <div>
+                  <Typography fontWeight="medium" gutterBottom>
+                    {item.title}
+                  </Typography>
+                  <Typography variant="body2" sx={{ color: 'grey.400' }}>
+                    {item.description}
+                  </Typography>
+                </div>
+              </Stack>
+            </Grid>
+          ))}
+        </Grid>
+
+        <Typography component="h2" variant="h5" sx={{ 
+          color: 'grey.400', 
+          width: { sm: '100%', md: '60%' }, 
+          textAlign: { sm: 'left', md: 'center' }}}
+        >
+          Comprehensive Solution
+        </Typography>
+        <Grid container spacing={2.5}>
+          {comprehensiveSolutionItems.map((item, index) => (
+            <Grid item xs={6} sm={6} md={6} key={index}>
               <Stack
                 direction="column"
                 color="inherit"

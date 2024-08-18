@@ -8,29 +8,26 @@ import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
-import DevicesRoundedIcon from '@mui/icons-material/DevicesRounded';
-import EdgesensorHighRoundedIcon from '@mui/icons-material/EdgesensorHighRounded';
-import ViewQuiltRoundedIcon from '@mui/icons-material/ViewQuiltRounded';
+import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 import Conversational from './icons/Conversational';
 import Internet from './icons/Internet';
 import Integration from './icons/Integration';
 
 const items = [
   {
-    icon: <ChevronRightRoundedIcon fontSize="medium" sx={{ mt: '1px', ml: '2px' }}/>,
+    icon: <AutoAwesomeIcon fontSize="medium" sx={{ mt: '1px', ml: '2px' }}/>,
     title: 'Conversational retrieval from knowledge graph',
     description: 'We integrate vector search for unstructured text with navigation through the knowledge graph. This approach enhances context and delivers richer, more relevant responses.',
     image: <Conversational />,
   },
   {
-    icon: <ChevronRightRoundedIcon fontSize="medium" sx={{ mt: '1px', ml: '2px' }}/>,
+    icon: <AutoAwesomeIcon fontSize="medium" sx={{ mt: '1px', ml: '2px' }}/>,
     title: 'Public internet access',
     description: 'We are equipped to retrieve real-time information and provide up-to-date responses augmented with your knowledge base.',
     image: <Internet />,
   },
   {
-    icon: <ChevronRightRoundedIcon fontSize="medium" sx={{ mt: '1px', ml: '2px' }}/>,
+    icon: <AutoAwesomeIcon fontSize="medium" sx={{ mt: '1px', ml: '2px' }}/>,
     title: 'Custom integrations',
     description: 'We provide custom integrations with messaging platforms (WhatsApp, Telegram, etc) and CRM solutions (Hubspot, Zoho, Tidio etc).',
     image: <Integration />,
@@ -88,8 +85,9 @@ export default function FeaturesRight() {
               color="text.secondary"
               sx={{ mb: { xs: 2, sm: 4 } }}
             >
-              Turnkey solution for managing product discovery, customer support, 
-              and website lead profiling with an AI powered conversational chat experience.
+              Housing your enterprise’s comprehensive knowledge base for informed responses, 
+              our AI agent effectively answers queries and supercharges your business.
+              One line of code, and less than a minute of integration effort.
             </Typography>
           </div>
           <Grid container item gap={1} sx={{ display: { xs: 'auto', sm: 'none' } }}>
@@ -245,11 +243,6 @@ export default function FeaturesRight() {
                         event.stopPropagation();
                       }}
                     >
-                      <span>Learn more</span>
-                      <ChevronRightRoundedIcon
-                        fontSize="small"
-                        sx={{ mt: '1px', ml: '2px' }}
-                      />
                     </Link>
                   </Box>
                 </Box>

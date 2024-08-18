@@ -8,29 +8,26 @@ import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
-import DevicesRoundedIcon from '@mui/icons-material/DevicesRounded';
-import EdgesensorHighRoundedIcon from '@mui/icons-material/EdgesensorHighRounded';
-import ViewQuiltRoundedIcon from '@mui/icons-material/ViewQuiltRounded';
+import AutoFixHigh from '@mui/icons-material/AutoFixHigh';
 import Extract from './icons/Extract';
 import Transform from './icons/Transform';
 import Load from './icons/Load';
 
 const items = [
   {
-    icon: <ChevronRightRoundedIcon fontSize="medium" sx={{ mt: '1px', ml: '2px' }}/>,
+    icon: <AutoFixHigh fontSize="medium" sx={{ mt: '1px', ml: '2px' }}/>,
     title: 'Data ingestion from myriad sources',
     description: 'About 80% of enterprise data is in hard-to-use formats like HTML, PDF, CSV, PNG, and PPTX. We facilitate extraction from all these formats.',
     image: <Extract />,
   },
   {
-    icon: <ChevronRightRoundedIcon fontSize="medium" sx={{ mt: '1px', ml: '2px' }}/>,
+    icon: <AutoFixHigh fontSize="medium" sx={{ mt: '1px', ml: '2px' }}/>,
     title: 'Automatic identification of entities & their relationships',
     description: 'Creating accurate and meaningful knowledge graphs has traditionally been a time-consuming and manual task. We fully automate this process, eliminating the need for any human involvement.',
     image: <Transform />,
   },
   {
-    icon: <ChevronRightRoundedIcon fontSize="medium" sx={{ mt: '1px', ml: '2px' }}/>,
+    icon: <AutoFixHigh fontSize="medium" sx={{ mt: '1px', ml: '2px' }}/>,
     title: 'Storage in graph database with vector embeddings',
     description: 'We securely store your business data in a stable graph database that utilizes vector embeddings. You can access it using Cypher queries.',
     image: <Load />,
@@ -128,11 +125,6 @@ export default function FeaturesLeft() {
                   '&:hover > svg': { transform: 'translateX(2px)' },
                 }}
               >
-                <span>Learn more</span>
-                <ChevronRightRoundedIcon
-                  fontSize="small"
-                  sx={{ mt: '1px', ml: '2px' }}
-                />
               </Link>
             </Box>
           </Box>
