@@ -87,14 +87,17 @@ export default function Hero() {
               Markov AI
             </Typography>
           </Box>
+          <br/>
           <Typography
             textAlign="center"
             color="text.primary"
             sx={{ alignSelf: 'center', width: { sm: '100%', md: '80%' } }}
           >
-            Effortlessly convert your enterprise data into knowledge graphs featuring embeddings.
-            <br/>
-            Ground LLMs to get stellar answers & supercharge your business.
+            <span style={{ fontSize: '1.25em', fontStyle: 'italic' }}>
+              Effortlessly convert your enterprise data into knowledge graphs.
+              <br/>
+              Ground LLMs to get stellar answers & supercharge your business.
+            </span>
           </Typography>
           <Stack
             direction={{ xs: 'column', sm: 'row' }}
@@ -135,27 +138,55 @@ export default function Hero() {
             .
           </Typography>
         </Stack>
+        <br/>
+        <br/>
         <Box
-          id="image"
-          sx={(theme) => ({
-            mt: { xs: 8, sm: 10 },
-            alignSelf: 'center',
-            height: { xs: 500, sm: 700 },
-            width: { xs: 500, sm: 700 },
-            backgroundImage: 'url("/static/images/templates/templates-images/hero-light.webp")',
-            backgroundSize: 'cover',
-            borderRadius: '10px',
-            outline: '1px solid',
-            outlineColor:
-              theme.palette.mode === 'light'
-                ? alpha('#BFCCD9', 0.5)
-                : alpha('#9CCCFC', 0.1),
-            boxShadow:
-              theme.palette.mode === 'light'
-                ? `0 0 12px 8px ${alpha('#9CCCFC', 0.2)}`
-                : `0 0 24px 12px ${alpha('#033363', 0.2)}`,
-          })}
-        />
+          sx={{
+            display: 'flex',
+            flexDirection: { xs: 'column', md: 'row' },
+            justifyContent: 'center',
+            alignItems: 'center',
+            gap: 6,
+            mt: 4,
+          }}
+        >
+          <Box
+            sx={(theme) => ({
+              height: { xs: 400, sm: 400, md: 500 },
+              width: { xs: 400, sm: 400, md: 500 },
+              backgroundImage: 'url("/static/images/templates/templates-images/pipeline.webp")',
+              backgroundSize: 'cover',
+              borderRadius: '10px',
+              outline: '1px solid',
+              outlineColor:
+                theme.palette.mode === 'light'
+                  ? alpha('#BFCCD9', 0.5)
+                  : alpha('#9CCCFC', 0.1),
+              boxShadow:
+                theme.palette.mode === 'light'
+                  ? `0 0 12px 8px ${alpha('#9CCCFC', 0.2)}`
+                  : `0 0 24px 12px ${alpha('#033363', 0.2)}`,
+            })}
+          />
+          <Box
+            sx={(theme) => ({
+              height: { xs: 400, sm: 400, md: 500 },
+              width: { xs: 400, sm: 400, md: 500 },
+              backgroundImage: 'url("/static/images/templates/templates-images/retrieval.png")',
+              backgroundSize: 'cover',
+              borderRadius: '10px',
+              outline: '1px solid',
+              outlineColor:
+                theme.palette.mode === 'light'
+                  ? alpha('#BFCCD9', 0.5)
+                  : alpha('#9CCCFC', 0.1),
+              boxShadow:
+                theme.palette.mode === 'light'
+                  ? `0 0 12px 8px ${alpha('#9CCCFC', 0.2)}`
+                  : `0 0 24px 12px ${alpha('#033363', 0.2)}`,
+            })}
+          />
+        </Box>
       </Container>
     </Box>
   );
