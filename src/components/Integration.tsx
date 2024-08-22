@@ -53,7 +53,7 @@ export default function Integration() {
         </Typography>
         <Grid container spacing={2.5}>
           {comprehensiveSolutionItems.map((item, index) => (
-            <Grid item xs={4} sm={4} md={4} key={index}>
+            <Grid item xs={6} sm={4} md={4} key={index}>
               <Stack
                 direction="column"
                 color="inherit"
