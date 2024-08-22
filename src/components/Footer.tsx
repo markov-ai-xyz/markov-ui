@@ -8,8 +8,10 @@ import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { SiGithub } from "react-icons/si";
+import { SiLinkedin } from "react-icons/si";
+import { SiNpm } from "react-icons/si";
+import { SiPypi } from "react-icons/si";
 import MarkovSvg from './icons/MarkovSvg';
 
 function Copyright() {
@@ -148,13 +150,13 @@ export default function Footer() {
         }}
       >
         <div>
-          <Link color="text.secondary" href="#">
+          <Link color="text.secondary" href="/privacy-policy">
             Privacy Policy
           </Link>
           <Typography display="inline" sx={{ mx: 0.5, opacity: 0.5 }}>
             &nbsp;•&nbsp;
           </Typography>
-          <Link color="text.secondary" href="#">
+          <Link color="text.secondary" href="/terms-of-service">
             Terms of Service
           </Link>
           <Copyright />
@@ -174,15 +176,31 @@ export default function Footer() {
             aria-label="LinkedIn"
             sx={{ alignSelf: 'center' }}
           >
-            <LinkedInIcon />
+            <SiLinkedin />
           </IconButton>
           <IconButton
             color="inherit"
-            href="https://github.com/markov-ai-xyz/"
+            href="https://www.github.com/markov-ai-xyz/"
             aria-label="GitHub"
             sx={{ alignSelf: 'center' }}
           >
-            <GitHubIcon />
+            <SiGithub />
+          </IconButton>
+          <IconButton
+            color="inherit"
+            href="https://www.pypi.org/project/markov-ai/"
+            aria-label="PyPI"
+            sx={{ alignSelf: 'center' }}
+          >
+            <SiPypi />
+          </IconButton>
+          <IconButton
+            color="inherit"
+            href="https://www.npmjs.com/package/markov-ai/"
+            aria-label="NPM"
+            sx={{ alignSelf: 'center' }}
+          >
+            <SiNpm />
           </IconButton>
         </Stack>
       </Box>
