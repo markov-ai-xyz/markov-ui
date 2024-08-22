@@ -191,7 +191,7 @@ export default function Pricing() {
                   fullWidth
                   variant={tier.buttonVariant as 'outlined' | 'contained'}
                   component="a"
-                  href="/"
+                  href="https://cal.com/anant-chandra/quick-chat"
                   target="_blank"
                 >
                   {tier.buttonText}

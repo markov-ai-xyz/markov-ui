@@ -9,19 +9,18 @@ import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 
 export default function Hero() {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const [email, setEmail] = React.useState('');
-  const [isValidEmail, setIsValidEmail] = React.useState(true);
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const inputValue = event.target.value;
     setEmail(inputValue);
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    setIsValidEmail(emailRegex.test(inputValue));
   };
 
   const handleStartNow = () => {
-    if (isValidEmail) { 
+    if (emailRegex.test(email)) { 
       setEmail(''); 
+      window.open('https://cal.com/anant-chandra/quick-chat', '_blank');
     }
   };
 
@@ -120,14 +119,14 @@ export default function Hero() {
                 'aria-label': 'Enter your email address',
             }}
             value={email}
-            error={!isValidEmail}
+            error={email.length > 0 && !emailRegex.test(email)}
             onChange={handleInputChange}
           />
           <Button
             variant="contained"
             color="primary"
             onClick={handleStartNow}
-            disabled={!isValidEmail}
+            disabled={!emailRegex.test(email)}
           >
               Start now
           </Button>
