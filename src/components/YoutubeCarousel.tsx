@@ -91,10 +91,11 @@ const YoutubeCarousel: React.FC = () => {
 
   return (
     <Box sx={{ bgcolor: '#06090a', color: 'white' }}>
-      <Container id="examples" sx={{ py: { xs: 8, sm: 16 } }}>
+      <Container id="usage" sx={{ py: { xs: 8, sm: 16 } }}>
         <Typography component="h2" variant="h4" align="center" gutterBottom sx={{ mb: 4 }}>
-          Featured Videos
+          Example Usage
         </Typography>
+        <br/>
         <Box sx={{ display: 'flex' }}>
           <Box sx={{ width: '30%', pr: 2 }}>
             <Grid container spacing={2}>
