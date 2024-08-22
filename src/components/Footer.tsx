@@ -137,6 +137,9 @@ export default function Footer() {
           <Link color="text.secondary" onClick={() => scrollToSection('pricing')} sx={{ cursor: 'pointer' }}>
             Pricing
           </Link>
+          <Link color="text.secondary" onClick={() => scrollToSection('examples')} sx={{ cursor: 'pointer' }}>
+            Examples
+          </Link>
         </Box>
       </Box>
       <Box

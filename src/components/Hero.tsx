@@ -20,7 +20,9 @@ export default function Hero() {
   };
 
   const handleStartNow = () => {
-    if (isValidEmail) { setEmail(''); }
+    if (isValidEmail) { 
+      setEmail(''); 
+    }
   };
 
   return (
@@ -132,7 +134,7 @@ export default function Hero() {
         </Stack>
           <Typography variant="caption" textAlign="center" sx={{ opacity: 0.8 }}>
             By clicking &quot;Start now&quot; you agree to our&nbsp;
-            <Link href="#" color="primary">
+            <Link href="/terms-and-conditions" color="primary">
               Terms & Conditions
             </Link>
             .

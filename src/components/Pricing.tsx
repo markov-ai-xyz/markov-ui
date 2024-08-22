@@ -42,7 +42,7 @@ const tiers = [
     description: [
       'Generate AI agents customized for you',
       'Upload unlimited content across modalities & provide unlimited external links',
-      'Messaging, CRM & custom integrations',
+      'Messaging, CRM & other integrations',
     ],
     buttonText: 'Start now',
     buttonVariant: 'outlined',

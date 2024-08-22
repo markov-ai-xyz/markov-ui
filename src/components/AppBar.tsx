@@ -113,6 +113,14 @@ function AppBar({ mode, toggleColorMode }: AppBarProps) {
                     Pricing
                   </Typography>
                 </MenuItem>
+                <MenuItem
+                  onClick={() => scrollToSection('examples')}
+                  sx={{ py: '6px', px: '12px' }}
+                >
+                  <Typography variant="body2" color="text.primary">
+                    Examples
+                  </Typography>
+                </MenuItem>
               </Box>
             </Box>
             <Box
@@ -171,6 +179,9 @@ function AppBar({ mode, toggleColorMode }: AppBarProps) {
                   </MenuItem>
                   <MenuItem onClick={() => scrollToSection('pricing')}>
                     Pricing
+                  </MenuItem>
+                  <MenuItem onClick={() => scrollToSection('examples')}>
+                    Examples
                   </MenuItem>
                 </Box>
               </Drawer>

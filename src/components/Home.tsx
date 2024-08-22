@@ -22,29 +22,6 @@ const Home: React.FC = () => {
     setMode((prev) => (prev === 'dark' ? 'light' : 'dark'));
   };
 
-  const videos = [
-    {
-      id: 'QHlAEmLur9U',
-      title: 'AI Agent - recruiter',
-      description: 'A fast-paced journey through the history of the world, created by Bill Wurtz.',
-    },
-    {
-      id: 'V1-bFUvuDiQ',
-      title: 'AI Agent - shopping assistant',
-      description: 'The iconic opening theme song for The Muppet Show.',
-    },
-    {
-      id: 'BkGfotWFkek',
-      title: 'ETL - console',
-      description: 'The first video uploaded to YouTube, featuring YouTube co-founder Jawed Karim at the San Diego Zoo.',
-    },
-    {
-      id: 'H-9d3di7ygg',
-      title: 'ETL - SDK',
-      description: 'The classic music video for Rick Astley\'s 1987 hit "Never Gonna Give You Up".',
-    },
-  ];
-
   return (
     <ThemeProvider theme={defaultTheme}>
       <CssBaseline />
@@ -54,10 +31,11 @@ const Home: React.FC = () => {
         <FeaturesLeft />
         <FeaturesRight />
         <Divider />
-        <YoutubeCarousel videos={videos} />
         <Integration />
         <Divider />
         <Pricing />
+        <Divider />
+        <YoutubeCarousel />
         <Divider />
         <Footer />
       </Box>
