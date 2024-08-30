@@ -11,7 +11,7 @@ export default function Copyright(props: CopyrightProps) {
       {'Copyright © '}
       {new Date().getFullYear()}
       &nbsp;
-      Markov AI
+      ACN E-Commerce Private Limited
     </Typography>
   );
 }
