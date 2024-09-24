@@ -12,36 +12,37 @@ import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 import Conversational from './icons/Conversational';
 import Internet from './icons/Internet';
 import Integration from './icons/Integration';
+import { Theme } from '@mui/material';
 
-const items = [
+const items = (theme: Theme) => [
   {
-    icon: <AutoAwesomeIcon fontSize="medium" sx={{ mt: '1px', ml: '2px' }}/>,
+    icon: <AutoAwesomeIcon fontSize="medium" sx={{ mt: '1px', ml: '2px' }} />,
     title: 'Conversational retrieval from knowledge graph',
     description: 'We integrate vector search for unstructured text with navigation through the knowledge graph. This approach enhances context and delivers richer, more relevant responses.',
-    image: <Conversational />,
+    image: <Conversational mode={theme.palette.mode} />,
   },
   {
-    icon: <AutoAwesomeIcon fontSize="medium" sx={{ mt: '1px', ml: '2px' }}/>,
+    icon: <AutoAwesomeIcon fontSize="medium" sx={{ mt: '1px', ml: '2px' }} />,
     title: 'Public internet access',
     description: 'We are equipped to retrieve real-time information and provide up-to-date responses augmented with your knowledge base.',
-    image: <Internet />,
+    image: <Internet mode={theme.palette.mode} />,
   },
   {
-    icon: <AutoAwesomeIcon fontSize="medium" sx={{ mt: '1px', ml: '2px' }}/>,
+    icon: <AutoAwesomeIcon fontSize="medium" sx={{ mt: '1px', ml: '2px' }} />,
     title: 'Custom integrations',
     description: 'We provide custom integrations with messaging platforms (WhatsApp, Telegram, etc) and CRM solutions (Hubspot, Zoho, Tidio etc).',
-    image: <Integration />,
+    image: <Integration mode={theme.palette.mode} />,
   },
 ];
 
-export default function FeaturesRight() {
+export default function FeaturesRight({ theme }: { theme: Theme }) {
   const [selectedItemIndex, setSelectedItemIndex] = React.useState(0);
 
   const handleItemClick = (index: number) => {
     setSelectedItemIndex(index);
   };
 
-  const selectedFeature = items[selectedItemIndex];
+  const selectedFeature = items(theme)[selectedItemIndex];
 
   return (
     <Container id="features" sx={{ py: { xs: 8, sm: 16 } }}>
@@ -70,7 +71,7 @@ export default function FeaturesRight() {
                 width: '100%',
               }}
             >
-              { items[selectedItemIndex].image }
+              {items(theme)[selectedItemIndex].image}
             </Box>
           </Card>
         </Grid>
@@ -85,13 +86,13 @@ export default function FeaturesRight() {
               color="text.secondary"
               sx={{ mb: { xs: 2, sm: 4 } }}
             >
-              Housing your enterprise’s comprehensive knowledge base for informed responses, 
+              Housing your enterprise’s comprehensive knowledge base for informed responses,
               our AI agent effectively answers queries and supercharges your business.
               One line of code, and less than a minute of integration effort.
             </Typography>
           </div>
           <Grid container item gap={1} sx={{ display: { xs: 'auto', sm: 'none' } }}>
-            {items.map(({ title }, index) => (
+            {items(theme).map(({ title }, index) => (
               <Chip
                 key={index}
                 label={title}
@@ -134,7 +135,7 @@ export default function FeaturesRight() {
                 width: '100%',
               }}
             >
-              { items[selectedItemIndex].image }
+              {items(theme)[selectedItemIndex].image}
             </Box>
             <Box sx={{ px: 2, pb: 2 }}>
               <Typography color="text.primary" variant="body2" fontWeight="bold">
@@ -165,7 +166,7 @@ export default function FeaturesRight() {
             useFlexGap
             sx={{ width: '100%', display: { xs: 'none', sm: 'flex' } }}
           >
-            {items.map(({ icon, title, description }, index) => (
+            {items(theme).map(({ icon, title, description }, index) => (
               <Card
                 key={index}
                 variant="outlined"

@@ -12,36 +12,37 @@ import AutoFixHigh from '@mui/icons-material/AutoFixHigh';
 import Extract from './icons/Extract';
 import Transform from './icons/Transform';
 import Load from './icons/Load';
+import { Theme } from '@mui/material';
 
-const items = [
+const items = (theme: Theme) => [
   {
-    icon: <AutoFixHigh fontSize="medium" sx={{ mt: '1px', ml: '2px' }}/>,
+    icon: <AutoFixHigh fontSize="medium" sx={{ mt: '1px', ml: '2px' }} />,
     title: 'Data ingestion from myriad sources',
     description: 'About 80% of enterprise data is in hard-to-use formats like HTML, PDF, CSV, PNG, and PPTX. We facilitate extraction from all these formats.',
-    image: <Extract />,
+    image: <Extract mode={theme.palette.mode} />,
   },
   {
-    icon: <AutoFixHigh fontSize="medium" sx={{ mt: '1px', ml: '2px' }}/>,
+    icon: <AutoFixHigh fontSize="medium" sx={{ mt: '1px', ml: '2px' }} />,
     title: 'Automatic identification of entities & their relationships',
     description: 'Creating accurate and meaningful knowledge graphs has traditionally been a time-consuming and manual task. We fully automate this process, eliminating the need for any human involvement.',
-    image: <Transform />,
+    image: <Transform mode={theme.palette.mode} />,
   },
   {
-    icon: <AutoFixHigh fontSize="medium" sx={{ mt: '1px', ml: '2px' }}/>,
+    icon: <AutoFixHigh fontSize="medium" sx={{ mt: '1px', ml: '2px' }} />,
     title: 'Storage in graph database with vector embeddings',
     description: 'We securely store your business data in a stable graph database that utilizes vector embeddings. You can access it using Cypher queries.',
-    image: <Load />,
+    image: <Load mode={theme.palette.mode} />,
   },
 ];
 
-export default function FeaturesLeft() {
+export default function FeaturesLeft({ theme }: { theme: Theme }) {
   const [selectedItemIndex, setSelectedItemIndex] = React.useState(0);
 
   const handleItemClick = (index: number) => {
     setSelectedItemIndex(index);
   };
 
-  const selectedFeature = items[selectedItemIndex];
+  const selectedFeature = items(theme)[selectedItemIndex];
 
   return (
     <Container id="features" sx={{ py: { xs: 8, sm: 16 } }}>
@@ -57,12 +58,12 @@ export default function FeaturesLeft() {
               color="text.secondary"
               sx={{ mb: { xs: 2, sm: 4 } }}
             >
-              Extracts unstructured data from diverse sources (documents, websites, audio, images). 
+              Extracts unstructured data from diverse sources (documents, websites, audio, images).
               Transforms it into a multi-modal knowledge graph, and loads it into a database of your choice.
             </Typography>
           </div>
           <Grid container item gap={1} sx={{ display: { xs: 'auto', sm: 'none' } }}>
-            {items.map(({ title }, index) => (
+            {items(theme).map(({ title }, index) => (
               <Chip
                 key={index}
                 label={title}
@@ -105,7 +106,7 @@ export default function FeaturesLeft() {
                 width: '100%',
               }}
             >
-              { items[selectedItemIndex].image }
+              {items(theme)[selectedItemIndex].image}
             </Box>
             <Box sx={{ px: 2, pb: 2 }}>
               <Typography color="text.primary" variant="body2" fontWeight="bold">
@@ -136,7 +137,7 @@ export default function FeaturesLeft() {
             useFlexGap
             sx={{ width: '100%', display: { xs: 'none', sm: 'flex' } }}
           >
-            {items.map(({ icon, title, description }, index) => (
+            {items(theme).map(({ icon, title, description }, index) => (
               <Card
                 key={index}
                 variant="outlined"
@@ -245,7 +246,7 @@ export default function FeaturesLeft() {
                 width: '100%',
               }}
             >
-              { items[selectedItemIndex].image }
+              {items(theme)[selectedItemIndex].image}
             </Box>
           </Card>
         </Grid>
