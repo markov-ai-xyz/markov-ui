@@ -3,7 +3,7 @@ import { PaletteMode } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
-import { ThemeProvider, createTheme, useTheme } from '@mui/material/styles';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 import AppBar from './AppBar';
 import Hero from './Hero';
 import YoutubeCarousel from './YoutubeCarousel';
