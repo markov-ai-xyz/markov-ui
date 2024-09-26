@@ -95,7 +95,7 @@ export default function Hero() {
             sx={{ alignSelf: 'center', width: { sm: '100%', md: '80%' } }}
           >
             <span style={{ fontSize: '1.25em', fontStyle: 'italic' }}>
-              Effortlessly convert your enterprise data into knowledge graphs.
+              Effortlessly convert all your data into multi-modal knowledge graphs.
               <br/>
               Ground LLMs to get stellar answers & supercharge your business.
             </span>

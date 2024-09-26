@@ -12,7 +12,6 @@ import { SiGithub } from "react-icons/si";
 import { SiLinkedin } from "react-icons/si";
 import { SiNpm } from "react-icons/si";
 import { SiPypi } from "react-icons/si";
-import MarkovSvg from './icons/MarkovSvg';
 
 function Copyright() {
   return (
@@ -81,9 +80,6 @@ export default function Footer() {
           }}
         >
           <Box sx={{ width: { xs: '100%', sm: '60%' } }}>
-            <Box sx={{ ml: '-10px' }}>
-              <MarkovSvg className="markov-logo" width={100} height={100} />
-            </Box>
             <Typography variant="body2" fontWeight={600} gutterBottom>
               Newsletter
             </Typography>
