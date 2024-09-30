@@ -57,7 +57,7 @@ export default function Hero() {
               fontSize: 'clamp(3.5rem, 10vw, 4rem)',
             }}
           >
-            Convert chaos into clarity
+            Prepare your data
           </Typography>
           <Box
             sx={{
@@ -75,17 +75,7 @@ export default function Hero() {
                 marginRight: { md: '16px' },
               }}
             >
-              with
-            </Typography>
-            <Typography
-              variant="h1"
-              sx={{
-                textAlign: 'center',
-                fontSize: 'clamp(3.5rem, 10vw, 4rem)',
-                color: (theme) => theme.palette.mode === 'light' ? 'primary.main' : 'primary.light',
-              }}
-            >
-              Markov AI
+              for LLMs
             </Typography>
           </Box>
           <br/>
@@ -95,7 +85,7 @@ export default function Hero() {
             sx={{ alignSelf: 'center', width: { sm: '100%', md: '80%' } }}
           >
             <span style={{ fontSize: '1.25em', fontStyle: 'italic' }}>
-              Effortlessly convert all your data into multi-modal knowledge graphs.
+              Transform all your data into multi-modal knowledge graphs.
               <br/>
               Ground LLMs to get stellar answers & supercharge your business.
             </span>
