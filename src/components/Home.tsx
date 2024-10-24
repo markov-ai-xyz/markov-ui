@@ -10,7 +10,6 @@ import YoutubeCarousel from './YoutubeCarousel';
 import Integration from './Integration';
 import Pricing from './Pricing';
 import FeaturesLeft from './FeaturesLeft';
-import FeaturesRight from './FeaturesRight';
 import Footer from './Footer';
 import '../App.css';
 
@@ -29,7 +28,6 @@ const Home: React.FC = () => {
       <Hero />
       <Box sx={{ bgcolor: 'background.default' }}>
         <FeaturesLeft theme={defaultTheme} />
-        <FeaturesRight theme={defaultTheme} />
         <Divider />
         <Integration />
         <Divider />
